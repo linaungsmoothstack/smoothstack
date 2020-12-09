@@ -30,11 +30,26 @@ public class FindMaxTwoDArray {
 				}
 			}
 		}
+		printTwoDArray(twoDArray);
 		System.out.println("Max Value: Array[" + row + "][" + col + "]: " + maxValue);
 	}
 	
 	private static int getNextRandInt() {
 		return (int)(rand.nextInt(MAX_RANDOM_NUM - MIN_RANDOM_NUM + 1) + MIN_RANDOM_NUM);
+	}
+	
+	private static void printTwoDArray(int[][] twoDArray) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("[\n");
+		for(int i = 0; i < twoDArray.length; i++) {
+			sb.append(" [ ");
+			for(int j = 0; j < twoDArray[i].length; j++) {
+				sb.append(twoDArray[i][j] + " ");
+			}
+			sb.append("]\n");
+		}
+		sb.append("]");
+		System.out.println(sb);
 	}
 
 }
